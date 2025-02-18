@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Crime Radar AI - Real-time crime tracking and predictive analytics system for enhanced public safety">
+    <title>Crime Radar AI - Real-time Crime Tracking & Predictive Analytics</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Exo+2:wght@300;500&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.3.4/tsparticles.min.js"></script>
+    <style>
+      :root {
+        --neon-green: #4e9fc8;
+        --cyber-blue: #2196F3;
+      }
+
+      body {
+        background: #0a0f1d;
+        color: white;
+        font-family: 'Exo 2', sans-serif;
+        overflow-x: hidden;
+      }
+
+      /* Improved accessibility contrast */
+      .cyber-glow {
+        text-shadow: 0 0 10px var(--neon-green),
+                     0 0 20px var(--neon-green),
+                     0 0 30px var(--neon-green);
+      }
+
+      .holographic-card {
+        background: linear-gradient(145deg, rgba(16,23,42,0.9) 0%, rgba(10,15,29,0.9) 100%);
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+        border: 1px solid rgba(74, 246, 38, 0.3);
+        box-shadow: 0 0 30px rgba(74, 246, 38, 0.2);
+      }
+
+      .cyber-button {
+        background: linear-gradient(45deg, var(--neon-green) 0%, var(--cyber-blue) 100%);
+        padding: 1.5rem 3rem;
+        border: none;
+        border-radius: 8px;
+        font-family: 'Orbitron', sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .cyber-button, .scanline, .animate-pulse {
+          animation: none !important;
+          transition: none !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="particles" class="particles"></div>
+    <div class="scanline"></div>
+
+    <div class="min-h-screen flex items-center justify-center px-4 pt-10">
+      <div class="holographic-card p-8 md:p-12 max-w-2xl mx-4 transform hover:rotate-x-3 hover:rotate-y-3 transition-transform duration-500">
+        <h1 class="text-4xl md:text-5xl font-bold mb-8 text-center cyber-glow font-orbitron" aria-label="Crime Radar AI">
+          <span class="bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent">
+            CRIME RADAR AI
+          </span>
+        </h1>
+        
+        <p class="text-center mb-12 text-gray-300 max-w-xl mx-auto">
+          Advanced AI-powered platform for real-time crime monitoring, predictive threat analysis, 
+          and community safety enhancement.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          <div class="col-span-1 text-center">
+            <div class="h-24 w-24 bg-gradient-to-br from-green-400 to-blue-500 rounded-full mx-auto mb-4 animate-pulse"></div>
+            <p class="text-sm font-medium">Real-time Threat Detection</p>
+            <p class="text-xs text-gray-400 mt-2">Instant alerts and live monitoring</p>
+          </div>
+          <div class="col-span-1 text-center">
+            <div class="h-24 w-24 bg-gradient-to-br from-blue-400 to-green-500 rounded-full mx-auto mb-4 animate-pulse" style="animation-delay: 0.2s"></div>
+            <p class="text-sm font-medium">Predictive Analytics</p>
+            <p class="text-xs text-gray-400 mt-2">AI-powered crime forecasting</p>
+          </div>
+          <div class="col-span-1 text-center">
+            <div class="h-24 w-24 bg-gradient-to-br from-green-500 to-blue-400 rounded-full mx-auto mb-4 animate-pulse" style="animation-delay: 0.4s"></div>
+            <p class="text-sm font-medium">AI-Powered Insights</p>
+            <p class="text-xs text-gray-400 mt-2">Deep learning analysis</p>
+          </div>
+        </div>
+
+        <button 
+          class="cyber-button mx-auto block"
+          onclick="window.open('https://crimeradarai.vercel.app/', '_blank')"
+          aria-label="Access Crime Radar AI System"
+          role="button">
+          ACCESS SYSTEM
+        </button>
+      </div>
+    </div>
+
+    <script>
+      tsParticles.load("particles", {
+        particles: {
+          number: { value: 80 },
+          color: { value: ["#4AF626", "#2196F3"] },
+          shape: { type: "circle" },
+          opacity: { value: 0.5 },
+          size: { value: 2 },
+          move: {
+            enable: true,
+            speed: 1.5,
+            direction: "none",
+            random: true,
+            straight: false,
+            out_mode: "out",
+            bounce: false,
+          }
+        },
+        interactivity: {
+          events: {
+            onhover: { enable: true, mode: "repulse" },
+            onclick: { enable: true, mode: "push" }
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

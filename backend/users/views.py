@@ -11,6 +11,10 @@ from users.utils import jwt_encode, jwt_decode, auth_user
 
 from django.forms.models import model_to_dict
 
+from django.shortcuts import render
+
+def index(request):
+    return render(request, 'index.html')
 
 # ================================ #
 # ========== User API's ========== #
