@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'crimes',
     'users',
     'community',
+    'feedback',
 ]
 
 MIDDLEWARE = [

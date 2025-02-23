@@ -10,6 +10,7 @@ urlpatterns = [
     path('crimes/', include('crimes.urls')),
     path('users/', include('users.urls')),
     path('community/', include('community.urls')),
+    path('feedback/', include('feedback.urls')),
 ]
 
 if settings.DEBUG:
